@@ -1,0 +1,36 @@
+// geekforgeeks
+
+
+/* Returns true if the there is a subarray
+of arr[] with sum equal to 'sum' otherwise
+returns false. Also, prints the result */
+function subArraySum(arr, n, sum)
+{
+  let curr=0;
+	for(let i =0; i< n; i++){
+    curr = arr[i];
+    for(let j=i+1; j<=n;j++){
+      console.log('jjj',j)
+      if(curr == sum){
+        console.log('indexxx', i, j-1)
+        return
+      }
+      if(curr > sum || j==n){
+        console.log('wronggg')
+        break
+      }
+      curr = curr + arr[j]
+      console.log('summm', curr, arr[j],j)
+    }
+    
+  }
+  return
+}
+
+// Driver Code
+
+let arr= [25, 2, 4, 8, 9, 5, 10, 23];
+let n = arr.length;
+let sum = 23;
+subArraySum(arr, n, sum);
+
