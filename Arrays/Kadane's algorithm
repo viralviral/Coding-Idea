@@ -1,4 +1,5 @@
-//kadane algo -> maxSubarraySum
+//kadane algo -> maxSubarraySum -> TC: O(N)
+//Brute force -> TC O(N2)
 
 var maxSubarraySum = function(arr, N){
   let sum =0, maxs= arr[0];
