@@ -27,8 +27,6 @@ function subArraySum(arr, n, sum)
   return
 }
 
-// Driver Code
-
 let arr= [25, 2, 4, 8, 9, 5, 10, 23];
 let n = arr.length;
 let sum = 23;
