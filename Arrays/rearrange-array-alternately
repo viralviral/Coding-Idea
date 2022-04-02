@@ -1,5 +1,5 @@
 //https://practice.geeksforgeeks.org/problems/-rearrange-array-alternately-1587115620/1#
-
+// TC - O(n) , SC: O(n)
 const rearrange = function(arr1, n){
   let res = [];
   let min =0;
