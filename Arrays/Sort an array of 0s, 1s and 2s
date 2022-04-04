@@ -1,0 +1,27 @@
+// https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1# 
+//SORT ARRAY R FOLLOW BELOW METHOD
+const sortArray = function(arr, n){
+  let z=0,o=0,t=0;
+   for(let i=0;i<n;i++)
+   {
+       if(arr[i]==0) z++;
+       if(arr[i]==1) o++;
+       if(arr[i]==2) t++;
+   }
+
+   for(let i=0;i<z;i++)
+   {
+       arr[i]=0;
+   }
+   for(let i=z;i<z+o;i++)
+   {
+       arr[i]=1;
+   }
+   for(let i=z+o;i<z+o+t;i++)
+   {
+       arr[i]=2;
+   }
+  return arr;
+}
+
+console.log(sortArray([2,1,0,1,0,2], 5))
