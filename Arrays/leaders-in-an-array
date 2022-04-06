@@ -1,0 +1,17 @@
+//https://practice.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1 , TC:O(N2)
+
+const leaders = function(arr, n){
+  for(let i =0;i<n;i++){
+    let j;
+    for( j=i+1;j<n;j++){
+      if(arr[i]<=arr[j]){
+        break;
+      }
+    }
+    if(j==n){
+        console.log(arr[i]+ " ")
+      }
+  }
+}
+
+console.log(leaders([ 16, 17, 4, 3, 5, 2 ], 6))
