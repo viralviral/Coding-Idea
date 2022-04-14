@@ -1,0 +1,28 @@
+//https://practice.geeksforgeeks.org/problems/pythagorean-triplet3018/1#
+const checkTriplet = function(arr, n){
+
+  arr=arr.map(i => i*i)
+  arr.sort((a,b)=> a-b)
+  //console.log(arr)
+  
+  for(let i=n-1;i>=0;i--){
+    let r,l;
+    l=0;r=i-1;
+     //console.log("sssss", i,l,r, arr[i], arr[l], arr[r]);
+    while(l<r){
+      if(arr[l]+arr[r]==arr[i]){
+        //console.log('fffffff')
+        return 'Yes';
+      }
+      if(arr[l]+arr[r] < arr[i]){
+        l++;
+      }else{
+        r--;
+      }
+    }
+    
+  }
+  return 'No';
+}
+
+console.log(checkTriplet([4, 49, 1, 59, 19, 81, 97, 99, 82, 90, 99 ,10, 58, 73, 23 ],15))
