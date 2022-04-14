@@ -11,7 +11,7 @@ const checkTriplet = function(arr, n){
      //console.log("sssss", i,l,r, arr[i], arr[l], arr[r]);
     while(l<r){
       if(arr[l]+arr[r]==arr[i]){
-        //console.log('fffffff')
+        //console.log('yesss')
         return 'Yes';
       }
       if(arr[l]+arr[r] < arr[i]){
