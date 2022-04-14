@@ -1,9 +1,4 @@
-// geekforgeeks
 
-
-/* Returns true if the there is a subarray
-of arr[] with sum equal to 'sum' otherwise
-returns false. Also, prints the result */
 function subArraySum(arr, n, sum)
 {
   let curr=0;
