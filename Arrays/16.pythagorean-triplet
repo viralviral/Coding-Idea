@@ -1,4 +1,7 @@
 //https://practice.geeksforgeeks.org/problems/pythagorean-triplet3018/1#
+//brute force method - TC:O(N3) 
+
+//TC:O(N2)
 const checkTriplet = function(arr, n){
 
   arr=arr.map(i => i*i)
