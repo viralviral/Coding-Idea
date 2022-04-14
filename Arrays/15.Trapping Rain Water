@@ -1,0 +1,45 @@
+//https://practice.geeksforgeeks.org/problems/trapping-rain-water-1587115621/1#
+//TC: O(N2)
+const trappingWater = function(arr,n){
+  let left,right,res=0;
+  for(let i =1;i<n-1;i++){
+    left = arr[i];
+    for(let j=0;j<i;j++){
+      left = Math.max(left,arr[j])
+      console.log('left', left)        
+    }
+    right=arr[i];
+    for(j=i+1;j<n;j++){
+      right = Math.max(right,arr[j])
+      console.log('right', right)        
+    }
+    res+=Math.min(left,right)-arr[i];
+    console.log('res', res)  
+  }
+  return res;
+}
+
+console.log(trappingWater([3,0,0,2,0,4],6))
+
+
+//TC:O(N)
+
+const trappingWater = function(arr,n){
+  let left = []
+		let right = []
+		let water = 0;
+		left[0] = arr[0];
+		for (let i = 1; i < n; i++)
+			left[i] = Math.max(left[i - 1], arr[i]);
+    console.log('lll', left)
+		right[n - 1] = arr[n - 1];
+		for (let i = n - 2; i >= 0; i--)
+			right[i] = Math.max(right[i + 1], arr[i]);
+    console.log('rrrr', right)
+		for (let i = 0; i < n; i++)
+			water += Math.min(left[i], right[i]) - arr[i];
+    console.log('water', water)
+		return water;
+}
+
+console.log(trappingWater([3,0,0,2,0,4],6))
