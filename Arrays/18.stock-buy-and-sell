@@ -1,0 +1,29 @@
+//https://practice.geeksforgeeks.org/problems/stock-buy-and-sell-1587115621/1
+//TC:O(N2)
+
+const stockBuySell = function(A,n){
+  let max_profit = 0;
+  for(let i=0;i<n;i++){
+    for(let j=i+1;j<n;j++){
+      max_profit = Math.max(max_profit,A[j]-A[i])
+    }
+  }
+  return max_profit;
+}
+
+console.log(stockBuySell([7,1,5,3,6,4],6))
+
+//TC:O(N)
+const stockBuySell = function(A,n){
+  let max_profit=0;
+  let max_value=A[0];
+for(let i =0;i<n;i++){
+  max_value= Math.min(A[i],max_value)
+  console.log('max_value,',max_value)
+  max_profit= Math.max(max_profit, A[i]-max_value)
+  console.log('max_profit,',max_profit)
+}
+  return max_profit;
+}
+
+console.log(stockBuySell([100, 180, 260, 310, 40, 535 ,695],7))
