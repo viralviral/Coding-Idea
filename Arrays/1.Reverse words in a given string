@@ -1,0 +1,19 @@
+var revString = function(s) {
+  return s.split(".").reverse().join(".")
+    };    
+console.log(revString('i.like.this.program'))
+
+
+
+var revnum = function(n) {
+      var digit, result = 0
+
+    while( n >0){
+        digit = n % 10  
+        result = (result * 10) + digit 
+        n = n/10|0  
+    }  
+  
+    return result
+    };    
+console.log(revnum(2345))
