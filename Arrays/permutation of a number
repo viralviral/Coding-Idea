@@ -1,0 +1,22 @@
+var permutation = function(nums){
+  const r =[];
+  const dfs = (i,nums) =>{
+    console.log('startt', i, r, nums)
+    if(i===nums.length){
+      r.push(nums.slice());
+      console.log('baseee', i, r)
+      return;
+    }
+    for(let j=i; j<nums.length; j++){
+      [nums[i], nums[j]]= [nums[j], nums[i]];
+      console.log('11111',i, j, nums, nums[i], nums[j])
+      dfs(i+1, nums);
+      [nums[i], nums[j]]= [nums[j],nums[i]]
+      console.log('2222',i, j, nums, nums[i], nums[j])
+    }
+  }
+  dfs(0, nums);
+  return r;
+}
+
+console.log('dddd', permutation([1,2,3]))
