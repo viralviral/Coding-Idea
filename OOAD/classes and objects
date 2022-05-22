@@ -1,0 +1,16 @@
+class Test {
+  private c,d;
+  sum(a,b){ // sum is instance member function
+    return a+b;
+  }
+  multiply(){
+    c=2;
+    d=5;
+    return c*d;
+  }
+}
+
+let ob=new Test();
+console.log(ob.sum(1,2));
+let ob2=new Test();
+console.log(ob2.multiply());
