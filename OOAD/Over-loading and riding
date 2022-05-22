@@ -1,0 +1,30 @@
+// function over-loading(same function name but  diff signature)
+class Car{
+  public printcolour(){
+    console.log('parentttt');
+  }
+}
+
+class truck extends Car{
+  public printcolour(a){
+    console.log('childd', a);
+  }
+}
+let obj= new truck();
+obj.printcolour('white');
+
+//over-riding -> different in ts -> whatever the obj created that method will be called
+
+class Car{
+  public printcolour(){
+    console.log('parentttt');
+  }
+}
+
+class truck extends Car{
+  public printcolour(){
+    console.log('childd');
+  }
+}
+let obj= new truck();
+obj.printcolour();
