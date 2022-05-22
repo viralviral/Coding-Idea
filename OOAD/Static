@@ -1,0 +1,54 @@
+//static keyword -> allocated memory immedialtely
+class Test {
+  static  c; // instance member var
+  static  d;
+  static sum(a,b){ // sum is instance member function
+     Test.c=a;
+     Test.d=b;
+    return (Test.c+Test.d);
+  }
+}
+console.log(Test.sum(3,4))
+
+
+// calling static  function inside instance member function
+
+class Test {
+  static c;
+  static d;
+    
+  static sum(a,b){ // sum is instance member function
+    Test.c=a;
+    Test.d=b;
+    return (Test.c+Test.d);
+  }
+  output(a,b){
+    let s= Test.sum(a,b)
+    console.log('testtt',a,b, 'sum=', s)
+  }
+}
+
+let ob=new Test();
+console.log(ob.output(1,3));
+
+//calling instance member function inside  static  function
+
+class Test {
+  static c;
+  static d;
+    
+  static sum(a,b){ // sum is instance member function
+    Test.c=a;
+    Test.d=b;
+    let ob=new Test();
+    console.log('call',ob.output(a,b));
+    return (Test.c+Test.d);
+  }
+  output(a,b){
+
+    console.log('testtt',a,b)
+  }
+
+}
+
+console.log(Test.sum(3,4), Test.c)
