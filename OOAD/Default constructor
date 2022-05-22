@@ -1,0 +1,23 @@
+class Test {
+  private c;
+  private d;
+  constructor(){
+    this.c =5;
+    this.d=8;
+    
+  }
+  sum(){ // sum is instance member function
+    console.log('aa', this.c, this.d)
+    return (this.c+this.d);
+  }
+  // multiply(c,d){ //formal param , will receive
+  //   this.c=c;
+  //   this.d=d;
+  //   return this.c*this.d;
+  //}
+}
+
+let ob=new Test();
+console.log(ob.sum());
+// let ob2=new Test();
+// console.log(ob2.multiply(4,5));
