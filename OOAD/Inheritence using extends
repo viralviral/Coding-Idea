@@ -1,7 +1,6 @@
-
 // inheritence
 class Car{
-  private colour;
+  private colour; // encapsulation -> data hiding , wrapping all in single unit(all properties in this class alone), hides main functionality 
   private wheel;
   private seat;
   constructor (properties){
