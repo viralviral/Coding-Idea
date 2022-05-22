@@ -1,0 +1,34 @@
+
+// inheritence
+class Car{
+  private colour;
+  private wheel;
+  private seat;
+  constructor (properties){
+   const { colour, wheel, seat } = properties;
+    this.colour= colour; // this-> current obj/class
+    this.wheel= wheel;
+    this.seat= seat;
+    
+  }
+  public printcolour(sample){
+    this.colour = sample
+    console.log('colour : ', this.colour);
+  }
+}
+
+class truck extends Car{
+  private truckno;
+  private load;
+  constructor (truckno, load){  // before executing below this statemnets , parents constr will be called , compiler by default calls default constr but in our case it is parameterised constr , so use super keyword as pass all necessary params . Super -> represents parents class.
+    super({colour:'yellow', wheel:2, seat:1});
+    this.truckno= truckno;
+    this.load = load;
+  }
+   callotherfun(){
+   super.printcolour('red');
+    console.log('called successfully', this.truckno);
+  }
+}
+let obj= new truck(3, 6); //obj created ,truck constructer called , 
+console.log('final',obj.callotherfun() )
